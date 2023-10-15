@@ -54,4 +54,19 @@ public class Lambda {
         }
         return total;
     }
+
+    public static int sumWithCondition2(List<Integer> numbers, Conditional c) {
+        int total = 0;
+        for (int number : numbers) {
+            if (c.test(number)) {
+                total += number;
+            }
+        }
+        return total;
+    }
+
+    public static int sumWithCondition(List<Integer> numbers, Conditional c) {
+        return numbers.stream().filter(c::test).reduce(0,(x,y) -> x + y);
+
+    }
 }
