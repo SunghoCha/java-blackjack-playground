@@ -19,4 +19,11 @@ public class ExpressionTest {
                     Expression.of("&");
                 });
     }
+
+    @Test
+    public void of22() {
+        System.out.println((Expression.of("+").getClass()));
+
+
+    }
 }
